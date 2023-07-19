@@ -1,19 +1,27 @@
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './components/Header'
 import HomeMain from './components/home/HomeMain'
 
 const App = () => {
+
+  const [currentPage, setCurrentPage] = useState('HOME')
+  const changePage = (page: string) => {
+    setCurrentPage(page)
+  }
+
   return (
     <SafeAreaView style={styles.appContainer}>
       <View style={styles.content}>
         <Text style={styles.appTitle}>WorkOutApp</Text>
 
-        <HomeMain/>
+
+        {currentPage === 'HOME' && <HomeMain/>}
+        
       </View>
 
 
-      <Header/>
+      <Header func={changePage}/>
     </SafeAreaView>
   )
 }

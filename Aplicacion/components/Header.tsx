@@ -1,12 +1,16 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 
-export default function Header() {
+interface headerProps {
+  func: (page: string) => void
+}
+
+export default function Header({func}: headerProps) {
   return (
     <View style={styles.header}>
-      <TouchableOpacity><Text style={styles.headerSVG}>O</Text></TouchableOpacity>
-      <TouchableOpacity><Text style={styles.headerSVG}>O</Text></TouchableOpacity>
-      <TouchableOpacity><Text style={styles.headerSVG}>O</Text></TouchableOpacity>
+      <TouchableOpacity><Text style={styles.headerSVG} onPress={() => func('HOME')}>HOME</Text></TouchableOpacity>
+      <TouchableOpacity><Text style={styles.headerSVG} onPress={() => func('ROUTINES')}>ROUTINES</Text></TouchableOpacity>
+      <TouchableOpacity><Text style={styles.headerSVG} onPress={() => func('PROFILE')}>PROFILE</Text></TouchableOpacity>
     </View>
   )
 }
@@ -25,6 +29,7 @@ const styles = StyleSheet.create({
     },
     headerSVG: {
         fontWeight: 'bold',
-        fontSize: 20
+        fontSize: 20,
+        paddingVertical: 10
     },
 })
