@@ -61,7 +61,6 @@
 
 
 ### Pagina Principal
-- Boton para Body Weight.
 - Programa semanal.
 - Rutinas del dia.
 #### Pagina Programa Semanal
@@ -95,9 +94,10 @@
     Foto de perfil.
     Nombre de usuario.
     Fecha de creacion.
+- Boton para estadisticas de ejercicios.
+- Boton para Body Weight.
 - Estadisticas generales:
     Mejor peso.
     Racha semanal.
     Mejor ejercicio.
     Cantidad de entrenamientos.
-- Boton para estadisticas de ejercicios.
