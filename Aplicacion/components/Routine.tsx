@@ -8,16 +8,16 @@ interface RoutineProps {
 }
 
 export default function Routine({name, muscleGroup}: RoutineProps) {
-  return (
-    <TouchableOpacity style={styles.routineContainer}>
-      <Text style={styles.name}>{name}</Text>
-      <View  style={styles.musclesBox}>
-        {muscleGroup.map((item, index) => (
-            <Text  style={styles.muscles} key={index}>{item}</Text>
-        ))}
-      </View>
-    </TouchableOpacity>
-  )
+    return (
+        <TouchableOpacity style={styles.routineContainer}>
+            <Text style={styles.name}>{name}</Text>
+            <View  style={styles.musclesBox}>
+                {muscleGroup.map((item, index) => (
+                    <Text  style={styles.muscles} key={index}>{item}</Text>
+                ))}
+            </View>
+        </TouchableOpacity>
+    )
 }
 
 const styles = StyleSheet.create({

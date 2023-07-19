@@ -67,7 +67,8 @@ const styles = StyleSheet.create({
 
     cardTitle: {
         fontSize: 18,
-        marginBottom: 16
+        marginBottom: 16,
+        fontWeight: 'bold'
     },
     daysLetter: {
         width: daysDimentions,
