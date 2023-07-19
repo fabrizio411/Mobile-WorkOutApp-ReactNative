@@ -8,9 +8,9 @@ interface headerProps {
 export default function Header({func}: headerProps) {
   return (
     <View style={styles.header}>
-      <TouchableOpacity><Text style={styles.headerSVG} onPress={() => func('HOME')}>HOME</Text></TouchableOpacity>
-      <TouchableOpacity><Text style={styles.headerSVG} onPress={() => func('ROUTINES')}>ROUTINES</Text></TouchableOpacity>
-      <TouchableOpacity><Text style={styles.headerSVG} onPress={() => func('PROFILE')}>PROFILE</Text></TouchableOpacity>
+      <TouchableOpacity onPress={() => func('HOME')}><Text style={styles.headerSVG}>HOME</Text></TouchableOpacity>
+      <TouchableOpacity onPress={() => func('ROUTINES')}><Text style={styles.headerSVG}>ROUTINES</Text></TouchableOpacity>
+      <TouchableOpacity onPress={() => func('PROFILE')}><Text style={styles.headerSVG}>PROFILE</Text></TouchableOpacity>
     </View>
   )
 }

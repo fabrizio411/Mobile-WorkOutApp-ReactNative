@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, StatusBar } from 'react-native'
 import React, { useState } from 'react'
 import Header from './components/Header'
 import HomeMain from './components/home/HomeMain'
+import ProfileMain from './components/profile/ProfileMain'
 
 const App = () => {
 
@@ -11,18 +12,23 @@ const App = () => {
   }
 
   return (
-    <SafeAreaView style={styles.appContainer}>
-      <View style={styles.content}>
-        <Text style={styles.appTitle}>WorkOutApp</Text>
+    <>
+      <StatusBar backgroundColor={'#333'}/>
+
+      <SafeAreaView style={styles.appContainer}>
+        <View style={styles.content}>
+          <Text style={styles.appTitle}>WorkOutApp</Text>
 
 
-        {currentPage === 'HOME' && <HomeMain/>}
-        
-      </View>
+          {currentPage === 'HOME' && <HomeMain/>}
+          {currentPage === 'PROFILE' && <ProfileMain func={changePage}/>}
+          
+        </View>
 
 
-      <Header func={changePage}/>
-    </SafeAreaView>
+        <Header func={changePage}/>
+      </SafeAreaView>
+    </>
   )
 }
 
@@ -40,6 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: 'bold',
     textAlign: 'center',
+    color: '#FFF',
     marginVertical: 8,
     marginBottom: 16
   },
