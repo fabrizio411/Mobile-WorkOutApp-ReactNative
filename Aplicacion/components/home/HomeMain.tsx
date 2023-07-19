@@ -1,14 +1,21 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import WeekProgram from './WeekProgram'
+import TodayRoutines from './TodayRoutines'
 
 
 export default function HomeMain() {
   return (
-    <View>
+    <View style={styles.pageContainer}>
       <WeekProgram/>
+      <TodayRoutines/>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    pageContainer: {
+        display: 'flex',
+        gap: 30
+    }
+})
