@@ -9,6 +9,7 @@ const App = () => {
       <View>
         <Text style={styles.appTitle}>WorkOutApp</Text>
 
+        <HomeMain/>
       </View>
 
 
