@@ -15,10 +15,13 @@ const styles = StyleSheet.create({
     header: {
         backgroundColor: '#666',
         height: 70,
+        width: '100%',
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-around',
-        alignItems: 'center'
+        alignItems: 'center',
+        position: 'relative',
+        bottom: 0
     },
     headerSVG: {
         fontWeight: 'bold',

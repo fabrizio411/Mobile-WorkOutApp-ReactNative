@@ -15,7 +15,7 @@ export default function HomeMain() {
 
 const styles = StyleSheet.create({
     pageContainer: {
-        display: 'flex',
-        gap: 30
+        flex: 1,
+        gap: 30,
     }
 })

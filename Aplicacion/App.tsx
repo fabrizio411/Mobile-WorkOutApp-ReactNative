@@ -6,7 +6,7 @@ import HomeMain from './components/home/HomeMain'
 const App = () => {
   return (
     <SafeAreaView style={styles.appContainer}>
-      <View>
+      <View style={styles.content}>
         <Text style={styles.appTitle}>WorkOutApp</Text>
 
         <HomeMain/>
@@ -22,8 +22,11 @@ export default App
 
 const styles = StyleSheet.create({
   appContainer: {
-    flex: 1,
-    justifyContent: 'space-between'
+    flex: 1
+  },
+
+  content: {
+    flex: 1
   },
   appTitle: {
     fontSize: 26,
