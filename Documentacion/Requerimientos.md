@@ -61,9 +61,9 @@
 
 
 ### Pagina Principal
+- Boton para Body Weight.
 - Programa semanal.
 - Rutinas del dia.
-- Boton para Body Weight.
 #### Pagina Programa Semanal
 - Visualizacion del programa dividido por dias.
 - Boton de edicion en cada dia para modificar rutinas de ese dia.
