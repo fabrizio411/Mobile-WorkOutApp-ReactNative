@@ -20,11 +20,11 @@ export default function TodayRoutines() {
 
       <View style={styles.scrollContainer}>
         <ScrollView>
-            <View style={styles.routinesBox}>
-                {routineData.map((item, index) => (
-                    <Routine key={index} name={item.name} muscleGroup={item.muscleGroup} />
-                ))}
-            </View>
+            {routineData.map((item, index) => (
+                <View style={styles.routine} key={index}> 
+                    <Routine name={item.name} muscleGroup={item.muscleGroup} />
+                </View>
+            ))}
         </ScrollView>
       </View>
     </View>
@@ -44,11 +44,9 @@ const styles = StyleSheet.create({
 
     scrollContainer: {
         flex: 1,
-        marginBottom: 12,
     },
 
-    routinesBox: {
-        display: 'flex',
-        gap: 12
+    routine: {
+        marginBottom: 12
     }
 })

@@ -1,12 +1,17 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
 
-export default function WeekProgram() {
+
+interface ProgramProps {
+    func: (page: string) => void
+}
+
+export default function WeekProgram({func}: ProgramProps) {
   return (
     <View>
       <Text style={styles.sectionTitle}>Program</Text>
 
-      <View style={styles.programCard}>
+      <TouchableOpacity onPress={() => func('PROGRAM')} style={styles.programCard} >
         <View style={styles.row}>
             <Text style={styles.cardTitle}>My Week</Text>
             <TouchableOpacity><Text>O</Text></TouchableOpacity>
@@ -33,7 +38,7 @@ export default function WeekProgram() {
         </View>
 
 
-      </View>
+      </TouchableOpacity>
     </View>
   )
 }
