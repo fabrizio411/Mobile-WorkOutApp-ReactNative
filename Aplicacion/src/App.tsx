@@ -5,6 +5,7 @@ import HomeMain from '../components/home/HomeMain'
 import ProfileMain from '../components/profile/ProfileMain'
 import RoutinesMain from '../components/routines/RoutinesMain'
 import ProgramMain from '../components/home/week_program/ProgramMain'
+import BodyWeightMain from '../components/profile/body_weight/BodyWeightMain'
 
 const App = () => {
 
@@ -23,6 +24,8 @@ const App = () => {
                     {currentPage === 'PROGRAM' && <ProgramMain func={changePage}/>}
 
                     {currentPage === 'PROFILE' && <ProfileMain func={changePage}/>}
+                    {currentPage === 'BODYWEIGHT' && <BodyWeightMain func={changePage}/>}
+
                     {currentPage === 'ROUTINES' && <RoutinesMain func={changePage}/>}
                 </View>
 
