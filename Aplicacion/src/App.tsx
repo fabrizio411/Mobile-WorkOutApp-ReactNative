@@ -19,14 +19,13 @@ const App = () => {
 
             <SafeAreaView style={styles.appContainer}>
                 <View style={styles.content}>
-                    <Text style={styles.appTitle}>WorkOutApp</Text>
                     {currentPage === 'HOME' && <HomeMain func={changePage}/>}
-                    {currentPage === 'PROGRAM' && <ProgramMain/>}
+                    {currentPage === 'PROGRAM' && <ProgramMain func={changePage}/>}
+
                     {currentPage === 'PROFILE' && <ProfileMain func={changePage}/>}
                     {currentPage === 'ROUTINES' && <RoutinesMain func={changePage}/>}
                 </View>
 
-                <Header func={changePage}/>
             </SafeAreaView>
         </>
   )
@@ -42,12 +41,5 @@ const styles = StyleSheet.create({
     content: {
         flex: 1
     },
-    appTitle: {
-        fontSize: 26,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        color: '#FFF',
-        marginVertical: 8,
-        marginBottom: 8
-    },
+
 })

@@ -55,7 +55,7 @@ export default function Statistics() {
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: 16
+        paddingHorizontal: 16,
     },
 
     sectionTitle: {

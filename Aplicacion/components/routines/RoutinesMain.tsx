@@ -1,6 +1,8 @@
 import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import Routine from '../Routine'
+import Title from '../Title'
+import Header from '../Header'
 
 interface RoutineProps {
     func: (page: string) => void
@@ -45,6 +47,7 @@ export default function RoutinesMain({func}: RoutineProps) {
     
   return (
     <View style={styles.pageContainer}>
+        <Title/>
         <TouchableOpacity style={styles.btn} onPress={() => func('NEWROUTINE')}>
             <Text style={styles.btnTxt}>+ New Routine</Text>
         </TouchableOpacity>
@@ -59,6 +62,7 @@ export default function RoutinesMain({func}: RoutineProps) {
                 ))}
             </ScrollView>
         </View>
+        <Header func={func}/>
     </View>
   )
 }

@@ -1,6 +1,8 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import Statistics from './Statistics'
+import Title from '../Title'
+import Header from '../Header'
 
 interface profileProps {
     func: (page: string) => void
@@ -14,6 +16,7 @@ export default function ProfileMain({func}: profileProps) {
 }
   return (
     <View style={styles.pageContainer}>
+        <Title/>
         <Text style={styles.pageTitle}>My Profile</Text>
         <View style={styles.cardContainer}>
             <View style={styles.userDataContainer}>
@@ -36,11 +39,11 @@ export default function ProfileMain({func}: profileProps) {
             <TouchableOpacity style={styles.btn} onPress={() => func('BODYWEIGHT')}><Text style={styles.btnText}>BODY WEIGHT</Text></TouchableOpacity>
         </View>
 
-        <View>
+        <View style={styles.statsBox}>
             <Statistics/>
         </View>
+        <Header func={func}/>
     </View>
-
   )
 }
 
@@ -112,5 +115,9 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold'
     },
+
+    statsBox: {
+        flex: 1
+    }
 
 })
